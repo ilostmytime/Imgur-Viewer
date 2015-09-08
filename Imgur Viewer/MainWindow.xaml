@@ -5,18 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Imgur_Viewer"
         mc:Ignorable="d"
-        Title="imgur Viewer" Height="647" Width="723.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="imgur Viewer" Height="647" Width="723.5" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFB8B8B8">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80*"/>
             <ColumnDefinition Width="437*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnLoad" Content="Load" HorizontalAlignment="Left" Margin="10,562,0,0" VerticalAlignment="Top" Width="101" Click="onLoad" RenderTransformOrigin="0,0.5" Height="36"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Right" Margin="0,562,10,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="1,0.5" Grid.Column="1" Height="36" Click="onNext"/>
+        <Button x:Name="btnLoad" Content="Load" Margin="463,0,10,560" Click="onLoad" RenderTransformOrigin="0,0.5" Height="34" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <Button x:Name="btnNext" Content="Next" Margin="295,0,178,29" RenderTransformOrigin="1,0.5" Grid.Column="1" Click="onNext" Height="34" VerticalAlignment="Bottom"/>
 
-        <TextBox x:Name="txtLink" Height="36" Margin="39,562,164,20" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Grid.Column="1" BorderThickness="2" FontSize="14.667" TextAlignment="Center" Background="#FFD6D6D6" BorderBrush="Black"/>
-        <Image x:Name="imgMain" Grid.Column="1" HorizontalAlignment="Left" Height="503" Margin="10,36,0,0" VerticalAlignment="Top" Width="519"/>
-        <TextBlock x:Name="txtTitle" Grid.Column="1" HorizontalAlignment="Center" Margin="109,10,164,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="" Width="334" Height="21"/>
+        <TextBox x:Name="txtLink" Margin="95,12,172,0" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5" Grid.Column="1" BorderThickness="2" FontSize="14.667" TextAlignment="Center" Background="#FFD6D6D6" BorderBrush="Black" Height="34" VerticalAlignment="Top" Foreground="Black"/>
+        <Image x:Name="imgMain" Grid.Column="1" Height="427" Margin="0,51,78,0" VerticalAlignment="Top" Stretch="Fill" HorizontalAlignment="Right" Width="519"/>
+        <TextBlock x:Name="txtTitle" Grid.Column="1" HorizontalAlignment="Left" Margin="35,483,0,0" TextWrapping="Wrap" Text="" Width="457" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" FontSize="14" Foreground="White" TextAlignment="Center" Height="43" VerticalAlignment="Top"/>
+        <Button x:Name="btnPrevious" Content="Previous" Margin="113,0,360,29" RenderTransformOrigin="1,0.5" Grid.Column="1" Click="onPrevious" Height="34" VerticalAlignment="Bottom"/>
+        <MediaElement x:Name="mediaElement" Grid.Column="1" HorizontalAlignment="Left" Height="427" Margin="10,51,0,0" VerticalAlignment="Top" Width="519" MediaEnded="loop" LoadedBehavior="Play" UnloadedBehavior="Manual"/>
+        <ComboBox x:Name="sorting" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" AllowDrop="True" IsReadOnly="True"/>
 
     </Grid>
 </Window>

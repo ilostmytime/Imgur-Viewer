@@ -10,13 +10,6 @@ namespace Imgur_Viewer
 {
     class loadGif
     {
-        public loadGif(string url)
-        {
-            BitmapImage gif = new BitmapImage();
-            gif.BeginInit();
-            gif.UriSource = new Uri(url, UriKind.Absolute);
-            gif.EndInit();
-
-        }
+     
     }
 }
